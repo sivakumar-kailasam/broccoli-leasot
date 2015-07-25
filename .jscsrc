@@ -1,0 +1,80 @@
+{
+  "excludeFiles": ["app/locales/*"],
+  "esnext": true,
+  "disallowSpacesInsideArrayBrackets": "all",
+  "disallowKeywordsOnNewLine": ["else"],
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowTrailingWhitespace": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowEmptyBlocks": true,
+  "disallowTrailingComma": true,
+  "maximumNumberOfLines": 100,
+  "requireSpaceBeforeObjectValues": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireBlocksOnNewline": 1,
+  "requireSpacesInsideObjectBrackets": "all",
+  "requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  },
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch"
+  ],
+  "requireLineFeedAtFileEnd": true,
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "while",
+    "catch"
+  ],
+  "requireSpaceAfterKeywords": [
+    "do",
+    "for",
+    "if",
+    "else",
+    "switch",
+    "case",
+    "try",
+    "while",
+    "with",
+    "return"
+  ],
+   "requireSpaceBeforeBinaryOperators": [
+    "<",
+    ">",
+    "=",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+  "requireSpaceAfterBinaryOperators": [
+    "<",
+    ">",
+    "=",
+    ",",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+  "requireSpaceBetweenArguments": true,
+  "validateIndentation": 2,
+  "validateParameterSeparator": ", "
+}
