@@ -22,16 +22,16 @@
     "url": "https://github.com/sivakumar-kailasam/broccoli-leasot/issues"
   },
   "homepage": "https://github.com/sivakumar-kailasam/broccoli-leasot#readme",
+  "dependencies": {
+    "broccoli-filter": "^0.2.0",
+    "leasot": "^2.2.2",
+    "chalk": "^1.1.0"
+  },
   "devDependencies": {
     "broccoli": "^0.16.4",
-    "broccoli-filter": "^0.2.0",
-    "broccoli-stew": "^0.3.4",
-    "broccoli-test-helpers": "0.0.8",
     "chai": "^3.2.0",
-    "chalk": "^1.1.0",
     "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
-    "leasot": "^2.2.2",
     "mocha": "^2.2.5",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
