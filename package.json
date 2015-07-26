@@ -29,6 +29,7 @@
     "broccoli-test-helpers": "0.0.8",
     "chai": "^1.10.0",
     "chalk": "^1.1.0",
+    "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
     "leasot": "^2.2.2",
     "mocha": "^2.1.0",
