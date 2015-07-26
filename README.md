@@ -27,9 +27,7 @@ var app = new EmberApp({
 ## Documentation
 
 ### `broccoliLeasot(inputTree, options)`
-kinds: [ 'TODO', 'FIXME', 'CUSTOM'],
-extensions: ['js', 'css', 'less', 'scss', 'hbs', 'handlebars'],
-groupBy: 'file|kind'
+
 ---
 
 `options.enabled` *{true|false}*
@@ -37,6 +35,30 @@ groupBy: 'file|kind'
 This will eliminate processing altogether.
 
 Default: **false**
+
+---
+
+`options.extensions` *Array of file types to scan*
+
+This indicates the files with specific extensions to be scanned. The complete list can be seen at the [leasot repo](https://github.com/pgilad/leasot#supported-languages)
+
+Default: **['js', 'css', 'less', 'scss', 'hbs', 'handlebars']**
+
+---
+
+`options.kinds` *Array of markers*
+
+These are the markers looked up in the comments of the files which are scanned.
+
+Default: **['TODO', 'FIXME']**
+
+---
+
+`options.groupBy` *file|kind*
+
+The broccoli plugin prints the analysis of leasot on the console. Users can choose between grouping markers by file name or kind of marker.
+
+Default: **file**
 
 ---
 
