@@ -1,4 +1,8 @@
 'use strict';
+
+/* jshint expr: true */
+/* Included above statement for chai*/
+
 var path = require('path');
 var chai = require('chai');
 var sinonChai = require('sinon-chai');
@@ -21,7 +25,7 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
     it('Should be disabled by default', function() {
       broccoliLeasot = new BroccoliLeasotFilter(fileTree);
       var outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.enabled).to.be.false();
+      expect(outputTree.tree.enabled).to.be.false;
     });
 
 
@@ -30,7 +34,7 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
         enabled: true
       });
       var outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.enabled).to.be.true();
+      expect(outputTree.tree.enabled).to.be.true;
     });
   });
 
@@ -58,7 +62,7 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
     it('Should have defaults', function() {
       broccoliLeasot = new BroccoliLeasotFilter(fileTree);
       var outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.extensions).to.exist();
+      expect(outputTree.tree.extensions).to.exist;
       expect(outputTree.tree.extensions).to.include('js', 'css', 'hbs', 'handlebars');
     });
 
@@ -78,7 +82,7 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
     it('Should have defaults', function() {
       broccoliLeasot = new BroccoliLeasotFilter(fileTree);
       var outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.groupBy).to.exist();
+      expect(outputTree.tree.groupBy).to.exist;
       expect(outputTree.tree.groupBy).to.be.equal('file');
     });
 
