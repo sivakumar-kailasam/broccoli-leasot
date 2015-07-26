@@ -1,6 +1,6 @@
 {
   "name": "broccoli-leasot",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A broccoli plugin which wraps around the leasot module to parse and output TODOs and FIXMEs from comments in your files",
   "main": "index.js",
   "scripts": {
