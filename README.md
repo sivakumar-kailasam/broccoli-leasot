@@ -1,4 +1,4 @@
-broccoli-leasot [![Build Status](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot.svg)](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot) [![Code Climate](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/gpa.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot) [![Test Coverage](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/coverage.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/coverage)
+broccoli-leasot [![Build Status](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot.svg)](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot)  [![Code Climate](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/gpa.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot)  [![Test Coverage](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/coverage.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/coverage)
 =============
 
 A broccoli plugin for the [leasot](https://github.com/pgilad/leasot) module to parse and output markers like TODOs and FIXMEs from comments
