@@ -5,6 +5,7 @@
         "beforeEach": false,
         "afterEach": false
     },
+    "esnext": true,
     "node" : true,
     "browser" : true,
     "boss" : false,
