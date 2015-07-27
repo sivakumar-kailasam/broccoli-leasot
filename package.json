@@ -35,10 +35,12 @@
   },
   "devDependencies": {
     "broccoli": "^0.16.4",
+    "broccoli-fixturify": "^0.1.0",
     "chai": "^3.2.0",
     "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
+    "multiline": "^1.0.2",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
     "test-console": "^1.0.0",

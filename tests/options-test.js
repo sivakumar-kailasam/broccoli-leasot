@@ -3,13 +3,14 @@
 /* jshint expr: true */
 /* Included above statement for chai*/
 
-var path = require('path');
 var chai = require('chai');
 var sinonChai = require('sinon-chai');
 var expect = chai.expect;
 chai.use(sinonChai);
 var BroccoliLeasotFilter = require('../index');
 var BroccoliBuilder = require('broccoli').Builder;
+var fixtureTree = require('broccoli-fixturify');
+var fixtures = require('./fixtures');
 
 
 describe('Test defaults & custom values for options passed to Broccoli Leasot', function() {
@@ -17,7 +18,20 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
   var fileTree;
 
   beforeEach(function() {
-    fileTree = path.join(__dirname, 'fixtures');
+    fileTree = fixtureTree({
+      app: {
+        // css: {
+        //   'application.css': fixtures.getCssContent()
+        // },
+        js: {
+          'app.js': fixtures.getJsContent()
+        },
+        templates: {
+          'application.hbs': fixtures.getHbsContent(),
+          'index.handlebars': fixtures.getHbsContent()
+        }
+      }
+    });
   });
 
   describe('Enabled option', function() {
