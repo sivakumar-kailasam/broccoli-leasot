@@ -13,8 +13,13 @@
     "url": "git+https://github.com/sivakumar-kailasam/broccoli-leasot.git"
   },
   "keywords": [
-    "broccoli",
-    "broccoli-plugin"
+    "broccoli-plugin",
+    "ember-addon",
+    "todo",
+    "fixme",
+    "comments", 
+    "productivity", 
+    "leasot"
   ],
   "author": "Sivakumar Kailasam (http://github.com/sivakumar-kailasam)",
   "license": "MIT",
