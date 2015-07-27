@@ -21,9 +21,9 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
   beforeEach(() => {
     fileTree = fixtureTree({
       app: {
-        // css: {
-        //   'application.css': fixtures.getCssContent()
-        // },
+        css: {
+          'application.css': fixtures.getCssContent()
+        },
         js: {
           'app.js': fixtures.getJsContent()
         },
