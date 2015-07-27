@@ -2,11 +2,13 @@
   "name": "broccoli-leasot",
   "version": "0.2.2",
   "description": "A broccoli plugin which wraps around the leasot module to parse and output TODOs and FIXMEs from comments in your files",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests/*-test.js",
-    "cover": "istanbul cover _mocha tests/*-test.js",
-    "test:watch": "wr 'clear & mocha tests/*-test.js' index.js tests --exec"
+    "compile": "babel src/index.js -o lib/index.js",
+    "test": "mocha --compilers js:babel/register tests/*-test.js",
+    "cover": "istanbul cover _mocha --  --compilers js:babel/register  tests/*-test.js",
+    "test:watch": "wr 'clear & mocha --compilers js:babel/register tests/*-test.js' src/index.js tests --exec",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "lodash": "^3.10.0"
   },
   "devDependencies": {
+    "babel": "^5.8.9",
     "broccoli": "^0.16.4",
     "broccoli-fixturify": "^0.1.0",
     "chai": "^3.2.0",
