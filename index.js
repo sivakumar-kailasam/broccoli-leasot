@@ -4,7 +4,7 @@ var path = require('path');
 var leasot = require('leasot');
 var chalk = require('chalk');
 var groupByFn = require('lodash/collection/groupBy');
-var forEachFn = require('lodash/collection/groupBy');
+var forEachFn = require('lodash/collection/forEach');
 
 function BroccoliLeasotFilter(inputTree, options) {
   if (!(this instanceof BroccoliLeasotFilter)) {
