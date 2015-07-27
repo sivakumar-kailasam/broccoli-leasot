@@ -5,17 +5,15 @@
 
 import chai from 'chai';
 import sinonChai from 'sinon-chai';
-import BroccoliLeasotFilter from '../src/index';
 import {
   Builder as BroccoliBuilder
-}
-from 'broccoli';
+} from 'broccoli';
 import fixtureTree from 'broccoli-fixturify';
 import fixtures from './fixtures';
+import BroccoliLeasotFilter from '../src/index';
 
 let expect = chai.expect;
 chai.use(sinonChai);
-
 
 describe('Test defaults & custom values for options passed to Broccoli Leasot', () => {
   let broccoliLeasot;
