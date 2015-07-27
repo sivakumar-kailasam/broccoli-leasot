@@ -1,6 +1,6 @@
 
 module.exports = {
-  getJsContent: function getJsContent() {
+  getJsContent() {
     return `//FIXME: isolate this fn
 	function coolFn (name) {
 		//TODO:  move the string to a constant
@@ -11,7 +11,7 @@ module.exports = {
 	coolFn();`;
   },
 
-  getCssContent: function getCssContent() {
+  getCssContent() {
     return `/* FIXME: body tag is too generic */
 	body {
 		/* TODO: this color should be different */
@@ -24,7 +24,7 @@ module.exports = {
 	}`;
   },
 
-  getHbsContent: function getHbsContent() {
+  getHbsContent() {
     return `{{!-- FIXME: surround with span tags --}}
 	hello {{name}}
 	{{!-- TODO: add fancy css classes --}}
