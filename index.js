@@ -3,6 +3,8 @@ var Filter = require('broccoli-filter');
 var path = require('path');
 var leasot = require('leasot');
 var chalk = require('chalk');
+var groupByFn = require('lodash/collection/groupBy');
+var forEachFn = require('lodash/collection/groupBy');
 
 function BroccoliLeasotFilter(inputTree, options) {
   if (!(this instanceof BroccoliLeasotFilter)) {
@@ -61,18 +63,32 @@ BroccoliLeasotFilter.prototype.build = function(readTree, destDir) {
  */
 function printMarkers(context) {
   context._markers = [].concat.apply([], context._markers);
-  context._markers.map(function(marker) {
+  context._markers = groupByFn(context._markers, context.groupBy);
+
+  forEachFn(context._markers, function(marker, groupByEntity) {
     context.console.log(
-      chalk.underline(marker.file) +
-      '\n' +
-      chalk.gray('line ' + marker.line) +
-      ' ' +
-      chalk.green(marker.kind) +
-      ' ' +
-      chalk.cyan(marker.text) + '\n'
+      getMessageToPrint(marker, groupByEntity, context.groupBy)
     );
   });
+
 }
+
+function getMessageToPrint(marker, groupByEntity, groupByCriteria) {
+  var inlineGroup = 'kind';
+  if (groupByCriteria === 'kind') {
+    inlineGroup = 'file';
+  }
+  var textToAdd = '';
+  marker.forEach(function(m) {
+    textToAdd += chalk.gray('line ' + m.line) +
+      ' ' +
+      chalk.green(m[inlineGroup]) +
+      ' ' +
+      chalk.cyan(m.text) + '\n';
+  });
+  return chalk.underline(groupByEntity) + '\n' + textToAdd;
+}
+
 
 function printExceptions(context) {
   if (context._exceptions.length > 0) {
