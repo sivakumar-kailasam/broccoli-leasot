@@ -67,12 +67,12 @@ Default: **file**
 
 ---
 
+
 ## Development
 This plugin is all about productivity so its written in es6/2015 with the help of [babel.js](https://babeljs.io/). The plugin code is at [src/index.js](https://github.com/sivakumar-kailasam/broccoli-leasot/blob/master/src/index.js). To see the compiled code run `npm run compile` and look at the content of *lib\index.js*
 
 Interested in using babel for your next npm module? then read this [excellent article](http://mammal.io/articles/using-es6-today/) which helped me.
 
----
 
 ## Tests
 
