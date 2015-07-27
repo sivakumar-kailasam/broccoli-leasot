@@ -3,12 +3,15 @@
 /* jshint expr: true */
 /* Included above statement for chai*/
 
-let chai = require('chai');
-let sinonChai = require('sinon-chai');
-let BroccoliLeasotFilter = require('../src/index');
-let BroccoliBuilder = require('broccoli').Builder;
-let fixtureTree = require('broccoli-fixturify');
-let fixtures = require('./fixtures');
+import chai from 'chai';
+import sinonChai from 'sinon-chai';
+import BroccoliLeasotFilter from '../src/index';
+import {
+  Builder as BroccoliBuilder
+}
+from 'broccoli';
+import fixtureTree from 'broccoli-fixturify';
+import fixtures from './fixtures';
 
 let expect = chai.expect;
 chai.use(sinonChai);
@@ -101,20 +104,20 @@ describe('Test defaults & custom values for options passed to Broccoli Leasot', 
       expect(outputTree.tree.groupBy).to.be.equal('file');
     });
 
-    it('Can be overriden', () => {
+    let testGroupByOption = (criteria, valueToCheckAgainst) => {
       broccoliLeasot = new BroccoliLeasotFilter(fileTree, {
-        groupBy: 'kind'
+        groupBy: criteria
       });
       let outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.groupBy).to.eql('kind');
+      expect(outputTree.tree.groupBy).to.eql(valueToCheckAgainst);
+    };
+
+    it('Can be overriden', () => {
+      testGroupByOption('kind', 'kind');
     });
 
     it('Defaults to file when unknown value is passed', () => {
-      broccoliLeasot = new BroccoliLeasotFilter(fileTree, {
-        groupBy: 'siva'
-      });
-      let outputTree = new BroccoliBuilder(broccoliLeasot);
-      expect(outputTree.tree.groupBy).to.eql('file');
+      testGroupByOption('siva', 'file');
     });
 
   });
