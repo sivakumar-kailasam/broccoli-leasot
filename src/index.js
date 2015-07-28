@@ -1,4 +1,3 @@
-'use strict';
 import Filter from 'broccoli-filter';
 import path from 'path';
 import leasot from 'leasot';

@@ -1,4 +1,3 @@
-
 module.exports = {
   getJsContent() {
     return `//FIXME: isolate this fn

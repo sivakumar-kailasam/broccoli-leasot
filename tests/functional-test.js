@@ -1,5 +1,3 @@
-'use strict';
-
 /* jshint expr: true */
 /* Included above statement for chai*/
 
