@@ -36,7 +36,7 @@
     "lodash": "^3.10.0"
   },
   "devDependencies": {
-    "babel": "^5.8.12",
+    "babel": "^5.8.19",
     "broccoli": "^0.16.5",
     "broccoli-fixturify": "^0.1.0",
     "chai": "^3.2.0",
