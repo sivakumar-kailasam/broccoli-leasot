@@ -15,7 +15,7 @@ from 'lodash/object';
 const DEFAULT_SUPPORTED_FILE_EXTENSIONS = ['js', 'css', 'less', 'scss', 'hbs', 'handlebars'];
 const DEFAULT_MARKERS = ['TODO', 'FIXME'];
 
-let printExceptions = (exceptions) => {
+let printExceptions = (stdout, exceptions) => {
   let _exceptions = exceptions;
   if (_exceptions.length > 0) {
     _exceptions = _exceptions.filter((exception, i) => {
@@ -23,7 +23,7 @@ let printExceptions = (exceptions) => {
     });
     let header = chalk.red(`Leasot module doesn't support ${_exceptions.join(', ')}`);
     let linkToSupportedExtensions = chalk.blue.underline('https://github.com/pgilad/leasot#supported-languages');
-    console.log(`\n${header} \n${linkToSupportedExtensions}`);
+    stdout.log(`\n${header} \n${linkToSupportedExtensions}`);
   }
 };
 
@@ -39,12 +39,12 @@ let getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
   return `${chalk.underline(groupByEntity)}\n${textToAdd}`;
 };
 
-let printMarkers = (markers, groupBy) => {
+let printMarkers = (stdout, markers, groupBy) => {
   let _markers = [].concat.apply([], markers);
   _markers = groupByFn(_markers, groupBy);
 
   forEachFn(_markers, (marker, groupByEntity) => {
-    console.log(getMessageToPrint(marker, groupByEntity, groupBy));
+    stdout.log(getMessageToPrint(marker, groupByEntity, groupBy));
   });
 };
 
@@ -64,6 +64,7 @@ class BroccoliLeasotFilter extends Filter {
     this.inputTree = inputTree;
     this._markers = [];
     this._exceptions = [];
+    this.console = console;
 
     let context = this;
     forOwnFn(options, (value, key) => {
@@ -79,8 +80,8 @@ class BroccoliLeasotFilter extends Filter {
   build(readTree, destDir) {
     let self = this;
     return super.build(readTree, destDir).then(() => {
-      printMarkers(self._markers, self.groupBy);
-      printExceptions(self._exceptions);
+      printMarkers(self.console, self._markers, self.groupBy);
+      printExceptions(self.console, self._exceptions);
     });
   }
 
