@@ -1,22 +1,26 @@
 language: node_js
 
 env:
-  - NODE_VERSION=0.10
-  - NODE_VERSION=0.12
-  - NODE_VERSION=iojs
-
+- NODE_VERSION=0.10
+- NODE_VERSION=0.12
+- NODE_VERSION=iojs
 install:
-  - test $TRAVIS_OS_NAME = "osx" && brew install nvm && source $(brew --prefix nvm)/nvm.sh || test $TRAVIS_OS_NAME = "linux"
-  - nvm install $NODE_VERSION
-  - node --version
-  - npm --version
-  - git --version
-  - npm install
-
+- test $TRAVIS_OS_NAME = "osx" && brew install nvm && source $(brew --prefix nvm)/nvm.sh  || test $TRAVIS_OS_NAME = "linux"
+- nvm install $NODE_VERSION
+- node --version
+- npm --version
+- git --version
+- npm install
 node_js:
-  - "0.12"
-
+- '0.12'
 script: npm run-script cover
-
 after_script:
 - cat coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info
+deploy:
+  provider: npm
+  email: sivakumar.ur.friend@gmail.com
+  api_key:
+    secure: $NPM_KEY
+  on:
+    branch: master
+    repo: sivakumar-kailasam/broccoli-leasot
