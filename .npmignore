@@ -1,1 +1,7 @@
+coverage/
+tests/
 src/
+.codeclimate.yml
+.jscsrc
+.jshintrc
+.travis.yml
