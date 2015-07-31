@@ -1,25 +1,49 @@
+const jsMarkers = [
+	'FIXME isolate this fn',
+	'TODO move the string to a constant',
+	` CUSTOM_TAG that's how we roll!`
+];
+
+const cssMarkers = [
+	'FIXME body tag is too generic',
+	' TODO this color should be different ',
+	'CUSTOM_TAG this doesnt belong here '
+
+];
+
+const hbsMarkers = [
+	'FIXME surround with span tags ',
+	'TODO add fancy css classes',
+	'CUSTOM_TAG just checkin'
+];
+
 module.exports = {
+	
+	jsMarkers,
+	cssMarkers,
+	hbsMarkers,
+
 	getJsContent() {
 		return [
-			'     //FIXME: isolate this fn',
+			`//${jsMarkers[0]}`,
 			'	function coolFn (name) {',
-			'		//TODO:  move the string to a constant',
+			`// ${jsMarkers[1]}`,
 			'		return \'Hello\'  name;',
 			'	}',
-			'	// CUSTOM_JS_TAG: that\'s how we roll!',
+			`// ${jsMarkers[2]}`,
 			'	coolFn();'
 		].join('\n');
 	},
 
 	getCssContent() {
 		return [
-			'/* FIXME: body tag is too generic */',
+			`/* ${cssMarkers[0]}*/`,
 			'	body {',
-			'		/* TODO: this color should be different */',
+			`/* ${cssMarkers[1]}*/`,
 			'		color: #bada55;',
 			'	}',
 			'	html {',
-			'		/* CUSTOM_TAG: this doesnt belong here */',
+			`/* ${cssMarkers[2]}*/`,
 			'		font-size: 12px;',
 			'	}'
 		].join('\n');
@@ -27,10 +51,10 @@ module.exports = {
 
 	getHbsContent() {
 		return [
-			'{{!-- FIXME: surround with span tags --}}',
+			`{{!-- ${hbsMarkers[0]} --}}`,
 			'hello {{name}}',
-			'{{!-- TODO: add fancy css classes --}}',
-			'{{!-- CUSTOM_HBS_TAG: just checkin --}}'
+			`{{!-- ${hbsMarkers[1]} --}}`,
+			`{{!-- ${hbsMarkers[2]} --}}`
 		].join('\n');
 	}
 
