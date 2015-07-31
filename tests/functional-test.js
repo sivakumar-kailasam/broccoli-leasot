@@ -14,7 +14,7 @@ let expect = chai.expect;
 chai.use(sinonChai);
 
 describe('Functional test suite for Broccoli Leasot', () => {
-  it('Should work', ()=> {
-    expect(true).to.be.true;
-  });
+	it('Should work', ()=> {
+		expect(true).to.be.true;
+	});
 });

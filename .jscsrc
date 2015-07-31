@@ -1,24 +1,25 @@
 {
-  "excludeFiles": ["app/locales/*"],
-  "esnext": true,
-  "disallowSpacesInsideArrayBrackets": "all",
-  "disallowKeywordsOnNewLine": ["else"],
-  "disallowNewlineBeforeBlockStatements": true,
-  "disallowTrailingWhitespace": true,
-  "disallowSpacesInCallExpression": true,
   "disallowEmptyBlocks": true,
+  "disallowKeywordsOnNewLine": [
+    "else"
+  ],
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowParenthesesAroundArrowParam": true,
+  "disallowSpacesInCallExpression": true,
+  "disallowSpacesInsideArrayBrackets": "all",
   "disallowTrailingComma": true,
-  "maximumNumberOfLines": 100,
-  "requireSpaceBeforeObjectValues": true,
-  "requireCommaBeforeLineBreak": true,
+  "disallowTrailingWhitespace": true,
+  "disallowYodaConditions": [
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+  "excludeFiles": ["app/locales/"],
+  "esnext": true,
+  "maximumNumberOfLines": 700,
   "requireBlocksOnNewline": 1,
-  "requireSpacesInsideObjectBrackets": "all",
-  "requireSpacesInConditionalExpression": {
-    "afterTest": true,
-    "beforeConsequent": true,
-    "afterConsequent": true,
-    "beforeAlternate": true
-  },
+  "requireCommaBeforeLineBreak": true,
   "requireCurlyBraces": [
     "if",
     "else",
@@ -29,37 +30,6 @@
     "catch"
   ],
   "requireLineFeedAtFileEnd": true,
-  "requireSpaceBeforeBlockStatements": true,
-  "requireSpaceBeforeKeywords": [
-    "else",
-    "while",
-    "catch"
-  ],
-  "requireSpaceAfterKeywords": [
-    "do",
-    "for",
-    "if",
-    "else",
-    "switch",
-    "case",
-    "try",
-    "while",
-    "with",
-    "return"
-  ],
-   "requireSpaceBeforeBinaryOperators": [
-    "<",
-    ">",
-    "=",
-    "+",
-    "-",
-    "/",
-    "*",
-    "==",
-    "===",
-    "!=",
-    "!=="
-  ],
   "requireSpaceAfterBinaryOperators": [
     "<",
     ">",
@@ -74,7 +44,47 @@
     "!=",
     "!=="
   ],
+  "requireSpaceAfterKeywords": [
+    "do",
+    "for",
+    "if",
+    "else",
+    "switch",
+    "case",
+    "try",
+    "while",
+    "with",
+    "return"
+  ],
   "requireSpaceBetweenArguments": true,
-  "validateIndentation": 2,
-  "validateParameterSeparator": ", "
+  "requireSpaceBeforeBinaryOperators": [
+    "<",
+    ">",
+    "=",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!=="
+  ],
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "while",
+    "catch"
+  ],
+  "requireSpaceBeforeObjectValues": true,
+  "requireSpacesInsideObjectBrackets": "all",
+  "requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  },
+  "validateIndentation": "\t",
+  "validateParameterSeparator": ", ",
+  "validateQuoteMarks": "'"
 }
