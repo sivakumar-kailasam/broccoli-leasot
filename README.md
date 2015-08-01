@@ -15,14 +15,14 @@ A broccoli plugin for the [leasot](https://github.com/pgilad/leasot) module to p
 
 ```js
 var broccoliLeasot = require('broccoli-leasot');
-var tree = broccoliLeasot(someTree);
+var tree = broccoliLeasot(someTree, options);
 ```
 
 As a Ember CLI Addon, simply `npm install --save-dev broccoli-leasot` and supply the options you would like:
 
 ```js
 var app = new EmberApp({
-  broccoliLeasotOptions: {
+  markers: {
     enabled: true,
     markers: [ 'TODO', 'FIXME', 'CUSTOM']
   }
