@@ -74,6 +74,7 @@ describe('Functional test suite for Broccoli Leasot', () => {
 			fixtures.jsMarkers.forEach(checkWithMarkerForGroupByFile);
 			fixtures.cssMarkers.forEach(checkWithMarkerForGroupByFile);
 			fixtures.hbsMarkers.forEach(checkWithMarkerForGroupByFile);
+			expect(message).to.include('9 markers found');
 		});
 
 	});

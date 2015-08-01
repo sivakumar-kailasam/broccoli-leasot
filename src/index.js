@@ -49,11 +49,20 @@ let getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
 
 let printMarkers = (stdout, markers, groupBy) => {
 	let _markers = [].concat.apply([], markers);
+	let noOfMarkers = _markers.length;
 	_markers = groupByFn(_markers, groupBy);
 
 	forEachFn(_markers, (marker, groupByEntity) => {
 		stdout.log(getMessageToPrint(marker, groupByEntity, groupBy));
 	});
+
+	let messageToShow = chalk.red.bold('✘') + ` ${noOfMarkers} markers found`;
+	
+	if (noOfMarkers === 0) {
+		messageToShow = chalk.green.bold('✔') + ' No markers found';
+	}
+
+	stdout.log(`\n  ${messageToShow} \n`);
 };
 
 
@@ -91,7 +100,6 @@ class BroccoliLeasotFilter extends Filter {
 		let self = this;
 		return super.build(readTree, destDir).then(() => {
 			printMarkers(self.console, self._markers, self.groupBy);
-			self.console.log(`\n ${self._markers.length} markers found`);
 			printExceptions(self.console, self._exceptions);
 		});
 	}
