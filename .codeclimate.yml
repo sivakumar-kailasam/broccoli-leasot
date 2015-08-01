@@ -12,3 +12,4 @@ exclude_paths:
   - "LICENSE"
   - "README.md"
   - "package.json"
+  - "ember-addon-main.js"
