@@ -40,7 +40,7 @@ let getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
 	}
 	let textToAdd = '';
 	marker.forEach((m) => {
-		textToAdd += `${chalk.gray('line ' + m.line)} ${chalk.green(m[inlineGroup])} ${chalk.cyan(m.text)}\n`;
+		textToAdd += `${chalk.gray('line ' + m.line)}   ${chalk.green(m[inlineGroup])}  ${chalk.cyan(m.text)}\n`;
 	});
 	return `${chalk.underline(groupByEntity)}\n${textToAdd}`;
 };
@@ -91,6 +91,7 @@ class BroccoliLeasotFilter extends Filter {
 		let self = this;
 		return super.build(readTree, destDir).then(() => {
 			printMarkers(self.console, self._markers, self.groupBy);
+			self.console.log(`\n ${self._markers.length} markers found`);
 			printExceptions(self.console, self._exceptions);
 		});
 	}

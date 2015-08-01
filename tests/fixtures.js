@@ -1,20 +1,20 @@
 const jsMarkers = [
-	'FIXME isolate this fn',
-	'TODO move the string to a constant',
-	` CUSTOM_TAG that's how we roll!`
+	'FIXME  isolate this fn',
+	'TODO  move the string to a constant',
+	`CUSTOM_TAG  that's how we roll!`
 ];
 
 const cssMarkers = [
-	'FIXME body tag is too generic',
-	' TODO this color should be different ',
-	'CUSTOM_TAG this doesnt belong here '
+	'FIXME  body tag is too generic',
+	' TODO  this color should be different ',
+	'CUSTOM_TAG  this doesnt belong here '
 
 ];
 
 const hbsMarkers = [
-	'FIXME surround with span tags ',
-	'TODO add fancy css classes',
-	'CUSTOM_TAG just checkin'
+	'FIXME  surround with span tags ',
+	'TODO  add fancy css classes',
+	'CUSTOM_TAG  just checkin'
 ];
 
 module.exports = {
