@@ -16,9 +16,9 @@
     ]
   },
   "scripts": {
-    "compile": "./node_modules/.bin/babel src/index.js -o lib/index.js",
-    "test": "./node_modules/.bin/mocha --compilers js:babel/register tests/*-test.js",
-    "cover": "./node_modules/.bin/babel-node -r ./node_modules/.bin/isparta cover --report html --report text --report lcov _mocha -- tests/*-test.js",
+    "compile": "babel src/index.js -o lib/index.js",
+    "test": "mocha --compilers js:babel/register tests/*-test.js",
+    "cover": "babel-node -r isparta cover --report html --report text --report lcov _mocha -- tests/*-test.js",
     "test:watch": "wr 'clear && mocha --compilers js:babel/register tests/*-test.js' src/index.js tests --exec",
     "prepublish": "npm run compile"
   },

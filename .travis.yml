@@ -10,6 +10,7 @@ install:
 - node --version
 - npm --version
 - git --version
+- npm install -g babel
 - npm install
 node_js:
 - '0.12'
