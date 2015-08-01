@@ -17,10 +17,3 @@ node_js:
 script: npm run-script cover
 after_script:
 - cat coverage/lcov.info | node_modules/.bin/codeclimate-test-reporter < coverage/lcov.info
-deploy:
-   provider: npm
-   email: sivakumar.ur.friend@gmail.com
-   api_key:
-     secure: $NPM_KEY
-   on:
-     tags: true
