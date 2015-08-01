@@ -11,6 +11,9 @@ A broccoli plugin for the [leasot](https://github.com/pgilad/leasot) module to p
 ## Installation
 `npm install --save-dev broccoli-leasot`
 
+## Screenshot
+![Ember inspector's markers](https://cloud.githubusercontent.com/assets/604117/9023570/7233674c-38be-11e5-9a71-36158e067be2.png)
+
 ## Usage
 
 ```js
