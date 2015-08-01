@@ -73,9 +73,10 @@ class BroccoliLeasotFilter extends Filter {
 		this.inputTree = inputTree;
 		this._markers = [];
 		this._exceptions = [];
-		this.console = console;
+		this.console = (options && options['console']) || console;
 
 		let context = this;
+
 		forOwnFn(options, (value, key) => {
 			context[key] = value;
 		});

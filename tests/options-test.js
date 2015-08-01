@@ -4,8 +4,9 @@
 import chai from 'chai';
 import sinonChai from 'sinon-chai';
 import {
-  Builder as BroccoliBuilder
-} from 'broccoli';
+	Builder as BroccoliBuilder
+}
+from 'broccoli';
 import fixtureTree from 'broccoli-fixturify';
 import fixtures from './fixtures';
 import BroccoliLeasotFilter from '../src/index';
