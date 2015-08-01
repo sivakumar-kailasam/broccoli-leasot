@@ -23,5 +23,4 @@ deploy:
    api_key:
      secure: $NPM_KEY
    on:
-     branch: master
-     repo: sivakumar-kailasam/broccoli-leasot
+     tags: true
