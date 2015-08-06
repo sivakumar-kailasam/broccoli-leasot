@@ -27,7 +27,7 @@ As a Ember CLI Addon, simply `npm install --save-dev broccoli-leasot` and supply
 var app = new EmberApp({
   markers: {
     enabled: true,
-    markers: [ 'TODO', 'FIXME', 'CUSTOM']
+    kinds: [ 'TODO', 'FIXME', 'CUSTOM']
   }
 });
 ```
