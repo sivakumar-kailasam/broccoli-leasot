@@ -39,11 +39,11 @@
     "broccoli": "^0.16.5",
     "broccoli-filter": "^0.2.0",
     "chalk": "^1.1.0",
-    "leasot": "^2.2.3",
-    "lodash": "^3.10.0"
+    "leasot": "^2.3.0",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
-    "babel": "^5.8.19",
+    "babel": "^5.8.21",
     "broccoli-fixturify": "^0.1.0",
     "chai": "^3.2.0",
     "codeclimate-test-reporter": "^0.1.0",
