@@ -43,12 +43,12 @@
     "lodash": "^3.10.1"
   },
   "devDependencies": {
-    "babel": "^5.8.21",
+    "babel": "^5.8.23",
     "broccoli-fixturify": "^0.1.0",
     "chai": "^3.2.0",
     "codeclimate-test-reporter": "^0.1.0",
-    "isparta": "^3.0.3",
-    "istanbul": "^0.3.18",
+    "isparta": "^3.0.4",
+    "istanbul": "^0.3.19",
     "mocha": "^2.2.5",
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
