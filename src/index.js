@@ -99,8 +99,10 @@ class BroccoliLeasotFilter extends Filter {
 	build(readTree, destDir) {
 		let self = this;
 		return super.build(readTree, destDir).then(() => {
-			printMarkers(self.console, self._markers, self.groupBy);
-			printExceptions(self.console, self._exceptions);
+			if(self.enabled) {
+				printMarkers(self.console, self._markers, self.groupBy);
+				printExceptions(self.console, self._exceptions);
+			}
 		});
 	}
 
