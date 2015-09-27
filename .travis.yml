@@ -4,6 +4,7 @@ env:
 - NODE_VERSION=0.10
 - NODE_VERSION=0.12
 - NODE_VERSION=iojs
+- NODE_VERSION=v4.1.1
 install:
 - test $TRAVIS_OS_NAME = "osx" && brew install nvm && source $(brew --prefix nvm)/nvm.sh  || test $TRAVIS_OS_NAME = "linux"
 - nvm install $NODE_VERSION
