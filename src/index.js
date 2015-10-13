@@ -110,7 +110,12 @@ class BroccoliLeasotFilter extends Filter {
 		if (this.enabled) {
 			let fileExtension = path.extname(relativePath);
 			if (leasot.isExtSupported(fileExtension)) {
-				this._markers.push(leasot.parse(fileExtension, content, relativePath, this.kinds));
+				this._markers.push(leasot.parse({
+					ext: fileExtension, 
+					content: content, 
+					fileName: relativePath, 
+					customTags: this.kinds
+				}));
 			} else {
 				this._exceptions.push(fileExtension);
 			}
