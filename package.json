@@ -1,6 +1,6 @@
 {
   "name": "broccoli-leasot",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "author": "Sivakumar Kailasam (http://github.com/sivakumar-kailasam)",
   "description": "A broccoli plugin which wraps around the leasot module to parse and output TODOs and FIXMEs from comments in your files",
   "license": "MIT",
