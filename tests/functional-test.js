@@ -62,7 +62,7 @@ describe('Functional test suite for Broccoli Leasot', () => {
 		fileTree = null;
 	});
 
-	it('Basic setup', () => {
+	it('Basic setup', (done) => {
 		setupFixtureTree();
 		broccoliLeasot = new BroccoliLeasotFilter(fileTree, {
 			enabled: true,
@@ -75,12 +75,13 @@ describe('Functional test suite for Broccoli Leasot', () => {
 			fixtures.cssMarkers.forEach(checkWithMarkerForGroupByFile);
 			fixtures.hbsMarkers.forEach(checkWithMarkerForGroupByFile);
 			expect(message).to.include('9 markers found');
+			done();
 		});
 
 	});
 
 
-	it('Group by type', () => {
+	it('Group by type', (done) => {
 		setupFixtureTree();
 		broccoliLeasot = new BroccoliLeasotFilter(fileTree, {
 			enabled: true,
@@ -93,11 +94,12 @@ describe('Functional test suite for Broccoli Leasot', () => {
 			fixtures.jsMarkers.forEach(checkWithMarkerForGroupByKind);
 			fixtures.cssMarkers.forEach(checkWithMarkerForGroupByKind);
 			fixtures.hbsMarkers.forEach(checkWithMarkerForGroupByKind);
+			done();
 		});
 
 	});
 
-	it('Imaginary extension lookup', () => {
+	it('Imaginary extension lookup', (done) => {
 		setupFixtureTree(true);
 		broccoliLeasot = new BroccoliLeasotFilter(fileTree, {
 			enabled: true,
@@ -108,6 +110,7 @@ describe('Functional test suite for Broccoli Leasot', () => {
 		return outputTree.build().then(function() {
 			let linkToLeasotDocs = 'https://github.com/pgilad/leasot#supported-languages';
 			expect(message).to.include(linkToLeasotDocs);
+			done();
 		});
 
 	});
