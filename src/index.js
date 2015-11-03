@@ -5,35 +5,30 @@ import chalk from 'chalk';
 import {
 	groupBy as groupByFn,
 	forEach as forEachFn
-}
-from 'lodash/collection';
+} from 'lodash/collection';
 import {
 	forOwn as forOwnFn
-}
-from 'lodash/object';
-
+} from 'lodash/object';
 
 
 const DEFAULT_SUPPORTED_FILE_EXTENSIONS = ['js', 'css', 'less', 'scss', 'hbs', 'handlebars'];
 const DEFAULT_MARKERS = ['TODO', 'FIXME'];
 
 
-
-let printExceptions = (stdout, exceptions) => {
+const printExceptions = (stdout, exceptions) => {
 	let _exceptions = exceptions;
 	if (_exceptions.length > 0) {
 		_exceptions = _exceptions.filter((exception, i) => {
 			return _exceptions.indexOf(exception) === i;
 		});
-		let header = chalk.red(`Leasot module doesn't support ${_exceptions.join(', ')}`);
-		let linkToSupportedExtensions = chalk.blue.underline('https://github.com/pgilad/leasot#supported-languages');
+		const header = chalk.red(`Leasot module doesn't support ${_exceptions.join(', ')}`);
+		const linkToSupportedExtensions = chalk.blue.underline('https://github.com/pgilad/leasot#supported-languages');
 		stdout.log(`\n${header} \n${linkToSupportedExtensions}`);
 	}
 };
 
 
-
-let getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
+const getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
 	let inlineGroup = 'kind';
 	if (groupByCriteria === 'kind') {
 		inlineGroup = 'file';
@@ -46,8 +41,7 @@ let getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
 };
 
 
-
-let printMarkers = (stdout, markers, groupBy) => {
+const printMarkers = (stdout, markers, groupBy) => {
 	let _markers = [].concat.apply([], markers);
 	let noOfMarkers = _markers.length;
 	_markers = groupByFn(_markers, groupBy);
@@ -57,14 +51,12 @@ let printMarkers = (stdout, markers, groupBy) => {
 	});
 
 	let messageToShow = chalk.red.bold('✘') + ` ${noOfMarkers} markers found`;
-	
 	if (noOfMarkers === 0) {
 		messageToShow = chalk.green.bold('✔') + ' No markers found';
 	}
 
 	stdout.log(`\n  ${messageToShow} \n`);
 };
-
 
 
 class BroccoliLeasotFilter extends Filter {
@@ -84,7 +76,7 @@ class BroccoliLeasotFilter extends Filter {
 		this._exceptions = [];
 		this.console = (options && options['console']) || console;
 
-		let context = this;
+		const context = this;
 
 		forOwnFn(options, (value, key) => {
 			context[key] = value;
@@ -97,7 +89,7 @@ class BroccoliLeasotFilter extends Filter {
 	}
 
 	build(readTree, destDir) {
-		let self = this;
+		const self = this;
 		return super.build(readTree, destDir).then(() => {
 			if(self.enabled) {
 				printMarkers(self.console, self._markers, self.groupBy);
@@ -108,7 +100,7 @@ class BroccoliLeasotFilter extends Filter {
 
 	processString(content, relativePath) {
 		if (this.enabled) {
-			let fileExtension = path.extname(relativePath);
+			const fileExtension = path.extname(relativePath);
 			if (leasot.isExtSupported(fileExtension)) {
 				this._markers.push(leasot.parse({
 					ext: fileExtension, 
