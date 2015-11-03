@@ -47,7 +47,7 @@
     "broccoli-fixturify": "0.2.0",
     "chai": "3.4.0",
     "codeclimate-test-reporter": "0.1.1",
-    "isparta": "3.2.0",
+    "isparta": "3.5.1",
     "istanbul": "0.4.0",
     "mocha": "2.3.3",
     "sinon": "1.17.2",
