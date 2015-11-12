@@ -4,7 +4,7 @@ broccoli-leasot
 A broccoli plugin for the [leasot](https://github.com/pgilad/leasot) module to parse and output markers like TODOs and FIXMEs from comments
 
 ## Repo health & stats
-[![Build Status](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot.svg)](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot) [![Build status](https://ci.appveyor.com/api/projects/status/a1bfeg0f9sx368yl?svg=true)](https://ci.appveyor.com/project/sivakumar-kailasam/broccoli-leasot)
+[![Build Status](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot.svg?branch=master)](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot) [![Build status](https://ci.appveyor.com/api/projects/status/a1bfeg0f9sx368yl/branch/master?svg=true)](https://ci.appveyor.com/project/sivakumar-kailasam/broccoli-leasot/branch/master)
  [![Code Climate](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/gpa.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot) [![Test Coverage](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/badges/coverage.svg)](https://codeclimate.com/github/sivakumar-kailasam/broccoli-leasot/coverage) [![Ember Observer Score](http://emberobserver.com/badges/broccoli-leasot.svg)](http://emberobserver.com/addons/broccoli-leasot)
 
 [![Dependency Status](https://david-dm.org/sivakumar-kailasam/broccoli-leasot.svg)](https://david-dm.org/sivakumar-kailasam/broccoli-leasot) [![devDependency Status](https://david-dm.org/sivakumar-kailasam/broccoli-leasot/dev-status.svg)](https://david-dm.org/sivakumar-kailasam/broccoli-leasot#info=devDependencies) 
