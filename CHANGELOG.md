@@ -1,5 +1,42 @@
 # Change Log
 
+## [v1.5.1](https://github.com/sivakumar-kailasam/broccoli-leasot/tree/v1.5.1) (2016-02-02)
+[Full Changelog](https://github.com/sivakumar-kailasam/broccoli-leasot/compare/v1.5.0...v1.5.1)
+
+**Fixed bugs:**
+
+- crashing because `app.trees.app` is not a string in ember-cli 1.13.13 [\#55](https://github.com/sivakumar-kailasam/broccoli-leasot/issues/55)
+
+**Closed issues:**
+
+- Improve ember addon [\#3](https://github.com/sivakumar-kailasam/broccoli-leasot/issues/3)
+
+**Merged pull requests:**
+
+- Update lodash to version 4.1.0 🚀 [\#54](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/54) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update mocha to version 2.4.5 🚀 [\#53](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/53) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update chai to version 3.5.0 🚀 [\#52](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/52) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update mocha to version 2.4.3 🚀 [\#51](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/51) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update sinon to version 1.17.3 🚀 [\#50](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/50) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update mocha to version 2.4.2 🚀 [\#49](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/49) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update lodash to version 4.0.1 🚀 [\#47](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/47) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update codeclimate-test-reporter to version 0.2.0 🚀 [\#44](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/44) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update lodash to version 4.0.0 🚀 [\#43](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/43) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update istanbul to version 0.4.2 🚀 [\#42](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/42) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update leasot to version 3.1.2 🚀 [\#41](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/41) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update broccoli-filter to version 1.2.3 🚀 [\#38](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/38) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update leasot to version 3.1.0 🚀 [\#36](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/36) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update istanbul to version 0.4.1 🚀 [\#35](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/35) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update broccoli to version 0.16.9 🚀 [\#34](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/34) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update mocha to version 2.3.4 🚀 [\#33](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/33) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update isparta to version 4.0.0 🚀 [\#32](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/32) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update babel to version 5.8.34 🚀 [\#28](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/28) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update chai to version 3.4.1 🚀 [\#27](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/27) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update isparta to version 3.5.3 🚀 [\#26](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/26) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update isparta to version 3.5.1 🚀 [\#24](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/24) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update isparta to version 3.2.0 🚀 [\#19](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/19) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update babel to version 5.8.29 🚀 [\#14](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/14) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
 ## [v1.5.0](https://github.com/sivakumar-kailasam/broccoli-leasot/tree/v1.5.0) (2015-10-21)
 [Full Changelog](https://github.com/sivakumar-kailasam/broccoli-leasot/compare/v1.4.1...v1.5.0)
 
