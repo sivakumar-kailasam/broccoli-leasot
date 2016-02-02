@@ -12,7 +12,10 @@ module.exports = {
 
 		this._super.included.apply(this, arguments);
 
-		var pathToApp = path.resolve(app.project.root, 'app');
+		var appFolder, testsFolder;
+
+		appFolder = path.resolve(app.project.root, app.trees.app._directoryPath);
+		testsFolder = path.resolve(app.project.root, app.trees.tests._directoryPath);
 
 		var optionsForLeasot = {
 			enabled: true
@@ -34,10 +37,18 @@ module.exports = {
 
 		new BroccoliBuilder(
 			new BroccoliLeasotFilter(
-				pathToApp,
-				optionsForLeasot
+				appFolder,
+				optionsForLeasot,
+				'app'
 			)
 		).build();
+		new BroccoliBuilder(
+			new BroccoliLeasotFilter(
+				testsFolder,
+				optionsForLeasot,
+				'tests'
+			)
+		).build()
 
 	}
 

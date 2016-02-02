@@ -41,7 +41,7 @@ const getMessageToPrint = (marker, groupByEntity, groupByCriteria) => {
 };
 
 
-const printMarkers = (stdout, markers, groupBy) => {
+const printMarkers = (stdout, markers, groupBy, treeInternalName) => {
 	let _markers = [].concat.apply([], markers);
 	let noOfMarkers = _markers.length;
 	_markers = groupByFn(_markers, groupBy);
@@ -50,9 +50,9 @@ const printMarkers = (stdout, markers, groupBy) => {
 		stdout.log(getMessageToPrint(marker, groupByEntity, groupBy));
 	});
 
-	let messageToShow = chalk.red.bold('✘') + ` ${noOfMarkers} markers found`;
+	let messageToShow = chalk.red.bold('✘') + ` ${noOfMarkers} markers found in ${treeInternalName}`;
 	if (noOfMarkers === 0) {
-		messageToShow = chalk.green.bold('✔') + ' No markers found';
+		messageToShow = chalk.green.bold('✔') + ' No markers found in ${treeInternalName}';
 	}
 
 	stdout.log(`\n  ${messageToShow} \n`);
@@ -61,7 +61,7 @@ const printMarkers = (stdout, markers, groupBy) => {
 
 class BroccoliLeasotFilter extends Filter {
 
-	constructor(inputTree, options) {
+	constructor(inputTree, options, treeInternalName) {
 		super(inputTree, options);
 
 		/* defaults */
@@ -74,6 +74,7 @@ class BroccoliLeasotFilter extends Filter {
 		this.inputTree = inputTree;
 		this._markers = [];
 		this._exceptions = [];
+		this.treeInternalName = treeInternalName;
 		this.console = (options && options['console']) || console;
 
 		const context = this;
@@ -92,7 +93,7 @@ class BroccoliLeasotFilter extends Filter {
 		const self = this;
 		return super.build(readTree, destDir).then(() => {
 			if(self.enabled) {
-				printMarkers(self.console, self._markers, self.groupBy);
+				printMarkers(self.console, self._markers, self.groupBy, self.treeInternalName);
 				printExceptions(self.console, self._exceptions);
 			}
 		});
@@ -118,6 +119,6 @@ class BroccoliLeasotFilter extends Filter {
 }
 
 
-export default (inputTree, options) => {
-	return new BroccoliLeasotFilter(inputTree, options);
+export default (inputTree, options, treeInternalName) => {
+	return new BroccoliLeasotFilter(inputTree, options, treeInternalName);
 };
