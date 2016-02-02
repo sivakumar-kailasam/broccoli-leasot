@@ -12,7 +12,7 @@ module.exports = {
 
 		this._super.included.apply(this, arguments);
 
-		var pathToApp = path.resolve(app.project.root, app.trees.app);
+		var pathToApp = path.resolve(app.project.root, 'app');
 
 		var optionsForLeasot = {
 			enabled: true
