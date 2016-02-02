@@ -1,5 +1,17 @@
 # Change Log
 
+## [Unreleased](https://github.com/sivakumar-kailasam/broccoli-leasot/tree/HEAD)
+
+[Full Changelog](https://github.com/sivakumar-kailasam/broccoli-leasot/compare/v1.5.1...HEAD)
+
+**Implemented enhancements:**
+
+- \[Enhancement\] Parse tests directory [\#57](https://github.com/sivakumar-kailasam/broccoli-leasot/issues/57)
+
+**Merged pull requests:**
+
+- Update lodash to version 4.2.0 🚀 [\#56](https://github.com/sivakumar-kailasam/broccoli-leasot/pull/56) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
 ## [v1.5.1](https://github.com/sivakumar-kailasam/broccoli-leasot/tree/v1.5.1) (2016-02-02)
 [Full Changelog](https://github.com/sivakumar-kailasam/broccoli-leasot/compare/v1.5.0...v1.5.1)
 
