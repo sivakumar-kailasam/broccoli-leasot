@@ -39,7 +39,7 @@
     "broccoli": "0.16.9",
     "broccoli-filter": "1.2.3",
     "chalk": "1.1.1",
-    "leasot": "3.2.1",
+    "leasot": "3.2.2",
     "lodash": "4.3.0"
   },
   "devDependencies": {
