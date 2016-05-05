@@ -1,7 +1,7 @@
 broccoli-leasot 
 =============
 
-A broccoli plugin for the [leasot](https://github.com/pgilad/leasot) module to parse and output markers like TODOs and FIXMEs from comments
+A broccoli plugin and an ember addon for the [leasot](https://github.com/pgilad/leasot) module to parse and output markers like TODOs and FIXMEs from comments
 
 ## Repo health & stats
 [![Build Status](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot.svg?branch=master)](https://travis-ci.org/sivakumar-kailasam/broccoli-leasot) [![Build status](https://ci.appveyor.com/api/projects/status/a1bfeg0f9sx368yl/branch/master?svg=true)](https://ci.appveyor.com/project/sivakumar-kailasam/broccoli-leasot/branch/master)
