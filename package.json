@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "babel": "5.8.34",
-    "broccoli-fixturify": "0.2.0",
+    "broccoli-fixturify": "0.3.0",
     "chai": "3.5.0",
     "codeclimate-test-reporter": "0.3.1",
     "isparta": "4.0.0",
